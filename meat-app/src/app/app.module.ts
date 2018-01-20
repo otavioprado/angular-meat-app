@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { MenuComponent } from 'app/restaurants/restaurant-detail/menu/menu.compo
 import { ShoppingCartComponent } from 'app/restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from 'app/restaurants/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/reviews.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/revi
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
