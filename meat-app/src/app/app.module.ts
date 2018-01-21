@@ -21,6 +21,8 @@ import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/revi
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from 'app/shared/input/input.component';
 import { RadioComponent } from 'app/shared/radio/radio.component';
+import { OrderItemsComponent } from 'app/order/order-items/order-items.component';
+import { OrderService } from 'app/order/order.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { RadioComponent } from 'app/shared/radio/radio.component';
     ReviewsComponent,
     OrderComponent,
     InputComponent,
-    RadioComponent
+    RadioComponent,
+    OrderItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import { RadioComponent } from 'app/shared/radio/radio.component';
   providers: [
     RestaurantsService,
     ShoppingCartService,
+    OrderService,
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [ AppComponent ]
