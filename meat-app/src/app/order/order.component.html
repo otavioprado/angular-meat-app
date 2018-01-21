@@ -24,7 +24,7 @@
 
               <div class="col-sm-6 col-xs-12">
                 <mt-input-container errorMessage="Campo obrigatório e no mínimo com 5 caracteres" label="Endereço">
-                  <input name="address" class="form-control" ngModel required placeholder="Endereço" minlength="5" autocomplete="off">
+                  <input name="optionalAddress" class="form-control" ngModel required placeholder="Endereço" minlength="5" autocomplete="off">
                 </mt-input-container>
               </div>
 
@@ -82,7 +82,8 @@
 
           <div class="row">
             <div class="col-xs-12">
-              <button href="order-summary.html" class="btn btn-success pull-right" [disabled]="!form.valid || cartItems().length === 0"><i class="fa fa-credit-card"></i> Concluir Pedido
+              <button (click)="checkOrder(form.value)" href="order-summary.html" class="btn btn-success pull-right" [disabled]="!form.valid || cartItems().length === 0">
+                <i class="fa fa-credit-card"></i> Concluir Pedido
               </button>
             </div>
           </div>
