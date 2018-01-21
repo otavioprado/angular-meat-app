@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'mt-order',
   templateUrl: './order.component.html'
 })
-export class OrderComponent implements OnInit {
+export class OrderComponent {
+
+  delivery: number = 8;
 
   paymentOptions: RadioOption[] = [
       { label: 'Dinheiro', value: 'MON'},
@@ -19,7 +21,8 @@ export class OrderComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  itemsValue(): number {
+    return this.orderService.itemsValue();
   }
 
   cartItems(): CartItem[] {
