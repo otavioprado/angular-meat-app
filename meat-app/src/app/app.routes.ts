@@ -7,9 +7,11 @@ import { Routes } from "@angular/router";
 import { AboutComponent } from 'app/about/about.component';
 import { RestaurantDetailComponent } from 'app/restaurants/restaurant-detail/restaurant-detail.component';
 import { OrderComponent } from 'app/order/order.component';
+import { LoginComponent } from 'app/security/login/login.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'restaurants', component: RestaurantsComponent },
   { path: 'restaurants/:id', component: RestaurantDetailComponent,
     children: [
