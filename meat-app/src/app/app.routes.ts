@@ -4,7 +4,6 @@ import { MenuComponent } from 'app/restaurants/restaurant-detail/menu/menu.compo
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HomeComponent } from './home/home.component';
 import { Routes } from "@angular/router";
-import { AboutComponent } from 'app/about/about.component';
 import { RestaurantDetailComponent } from 'app/restaurants/restaurant-detail/restaurant-detail.component';
 import { OrderComponent } from 'app/order/order.component';
 import { LoginComponent } from 'app/security/login/login.component';
@@ -21,5 +20,5 @@ export const ROUTES: Routes = [
     ]},
   { path: 'order', component: OrderComponent },
   { path: 'order-summary', component: OrderSummaryComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', loadChildren: './about/about.module#AboutModule' }
 ];
