@@ -1,4 +1,3 @@
-import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
@@ -38,8 +37,7 @@ import { LoginComponent } from './security/login/login.component';
   imports: [
     BrowserModule,
     HttpModule,
-    SharedModule,
-    CoreModule,
+    SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
