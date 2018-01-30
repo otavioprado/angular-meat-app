@@ -17,7 +17,7 @@ const ROUTES = [
   ],
   imports: [
     SharedModule,
-    RouterModule.forChild(ROUTES);
+    RouterModule.forChild(ROUTES)
   ]
 })
 export class OrderModule {
