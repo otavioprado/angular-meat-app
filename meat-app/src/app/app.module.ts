@@ -18,6 +18,7 @@ import { MenuItemComponent } from 'app/restaurants/restaurant-detail/menu-item/m
 import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from 'app/order-summary/order-summary.component';
 import { LoginComponent } from './security/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LoginComponent } from './security/login/login.component';
   imports: [
     BrowserModule,
     HttpModule,
+    BrowserAnimationsModule,
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
   ],
