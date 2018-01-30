@@ -18,10 +18,7 @@ import { MenuComponent } from 'app/restaurants/restaurant-detail/menu/menu.compo
 import { ShoppingCartComponent } from 'app/restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from 'app/restaurants/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/reviews.component';
-import { OrderComponent } from './order/order.component';
-import { OrderItemsComponent } from 'app/order/order-items/order-items.component';
 import { OrderService } from 'app/order/order.service';
-import { DeliveryCostsComponent } from 'app/order/delivery-costs/delivery-costs.component';
 import { OrderSummaryComponent } from 'app/order-summary/order-summary.component';
 import { LoginComponent } from './security/login/login.component';
 
@@ -37,9 +34,6 @@ import { LoginComponent } from './security/login/login.component';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItemsComponent,
-    DeliveryCostsComponent,
     OrderSummaryComponent,
     LoginComponent
   ],
