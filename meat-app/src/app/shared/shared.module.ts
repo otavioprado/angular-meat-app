@@ -1,3 +1,4 @@
+import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 import { OrderService } from 'app/order/order.service';
 import { RestaurantsService } from 'app/restaurants/restaurants.service';
 import { ShoppingCartService } from 'app/restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
   declarations: [
     InputComponent,
     RadioComponent,
-    RatingComponent
+    RatingComponent,
+    SnackbarComponent
   ],
   imports: [
     FormsModule,
@@ -25,7 +27,8 @@ import { CommonModule } from '@angular/common';
     RatingComponent,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    SnackbarComponent
   ]
 })
 export class SharedModule {
