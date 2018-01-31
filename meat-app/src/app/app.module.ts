@@ -19,6 +19,7 @@ import { ReviewsComponent } from 'app/restaurants/restaurant-detail/reviews/revi
 import { OrderSummaryComponent } from 'app/order-summary/order-summary.component';
 import { LoginComponent } from './security/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuItemComponent,
     ReviewsComponent,
     OrderSummaryComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
