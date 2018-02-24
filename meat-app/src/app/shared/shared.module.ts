@@ -8,6 +8,7 @@ import { InputComponent } from './input/input.component';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { LoginService } from '../security/login/login.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [ShoppingCartService, RestaurantsService, OrderService]
+      providers: [ ShoppingCartService, RestaurantsService, OrderService, LoginService ]
     }
   }
 }
