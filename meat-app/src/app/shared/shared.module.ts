@@ -1,3 +1,4 @@
+import { AuthInterceptor } from './../security/auth.interceptor';
 import { LeaveOrderGuard } from './../order/leave-order.guard';
 import { LoggedInGuard } from './../security/loggedin.guard';
 import { NotificationService } from './messages/notification.service';
@@ -12,6 +13,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LoginService } from '../security/login/login.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ export class SharedModule {
         LoginService,
         NotificationService,
         LoggedInGuard,
-        LeaveOrderGuard ]
+        LeaveOrderGuard,
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true } ]
     }
   }
 }
