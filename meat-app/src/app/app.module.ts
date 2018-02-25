@@ -23,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { UserDetailsComponent } from './header/user-details/user-details.component';
 
 registerLocaleData(localePt);
 
@@ -40,7 +41,8 @@ registerLocaleData(localePt);
     ReviewsComponent,
     OrderSummaryComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
