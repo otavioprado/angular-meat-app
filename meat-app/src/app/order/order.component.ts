@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
   numberPattern = /^[0-9]*$/;
 
   orderForm: FormGroup;
-  delivery: number = 8;
+  delivery = 8;
   orderId: string;
 
   paymentOptions: RadioOption[] = [
@@ -26,6 +26,20 @@ export class OrderComponent implements OnInit {
       { label: 'Cartão de Débito', value: 'DEB'},
       { label: 'Cartão Refeição', value: 'REF'}
   ];
+
+  static equalsTo(group: AbstractControl): { [key: string]: boolean } {
+    const email = group.get('email');
+    const emailConfirmation = group.get('emailConfirmation');
+
+    if (!email || !emailConfirmation) {
+      return undefined;
+    }
+
+    if (email.value !== emailConfirmation.value) {
+      return { emailsNotMatch: true }
+    }
+    return undefined;
+  }
 
   constructor(private orderService: OrderService,
               private router: Router,
@@ -45,20 +59,6 @@ export class OrderComponent implements OnInit {
     }, {
       validator: OrderComponent.equalsTo
     });
-  }
-
-  static equalsTo(group: AbstractControl): { [key: string]: boolean } {
-    const email = group.get('email');
-    const emailConfirmation = group.get('emailConfirmation');
-
-    if(!email || !emailConfirmation) {
-      return undefined;
-    }
-
-    if(email.value !== emailConfirmation.value) {
-      return { emailsNotMatch: true }
-    }
-    return undefined;
   }
 
   itemsValue(): number {
@@ -100,7 +100,7 @@ export class OrderComponent implements OnInit {
   }
 
   isOrderCompleted(): boolean {
-    return this.orderId != undefined;
+    return this.orderId !== undefined;
   }
 
 }

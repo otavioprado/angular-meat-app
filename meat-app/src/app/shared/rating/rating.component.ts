@@ -8,11 +8,11 @@ export class RatingComponent {
 
   @Output() rated = new EventEmitter<number>();
 
-  rates: number[] = [1,2,3,4,5];
+  rates: number[] = [1, 2, 3, 4, 5];
 
-  rate: number = 0;
+  rate = 0;
 
-  previousRate: number = 0;
+  previousRate = 0;
 
   constructor() { }
 
@@ -24,7 +24,7 @@ export class RatingComponent {
   }
 
   // mouse enter
-  setTemporaryRate(r : number) {
+  setTemporaryRate(r: number) {
     if(this.previousRate === undefined) {
       this.previousRate = this.rate;
     }
@@ -33,7 +33,7 @@ export class RatingComponent {
 
   // mouse leave
   clearTemporaryRate() {
-    if(this.previousRate != undefined) {
+    if (this.previousRate !== undefined) {
       this.rate = this.previousRate;
       this.previousRate = undefined;
     }
